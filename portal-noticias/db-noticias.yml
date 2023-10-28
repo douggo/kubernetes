@@ -10,3 +10,22 @@ spec:
       image: aluracursos/mysql-db:1
       ports:
         - containerPort: 3306
+      envFrom:
+        - configMapRef:
+            name: db-noticias-cm
+      #env:
+      #  - name: MYSQL_ROOT_PASSWORD
+      #    valueFrom:
+      #      configMapKeyRef:
+      #        name: db-noticias-cm
+      #        key: MYSQL_ROOT_PASSWORD
+      #  - name: MYSQL_DATABASE
+      #    valueFrom:
+      #      configMapKeyRef:
+      #        name: db-noticias-cm
+      #        key: MYSQL_DATABASE
+      #  - name: MYSQL_PASSWORD
+      #    valueFrom:
+      #      configMapKeyRef:
+      #        name: db-noticias-cm
+      #        key: MYSQL_PASSWOR#D
